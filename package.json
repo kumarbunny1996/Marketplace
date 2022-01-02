@@ -1,0 +1,21 @@
+{
+  "name": "marketplace",
+  "version": "1.0.0",
+  "description": "smart contract place",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sathish",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^3.0.0",
+    "ethers": "^5.5.2",
+    "web3": "^1.6.1"
+  }
+}

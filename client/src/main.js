@@ -1,6 +1,11 @@
-import {createApp, h} from 'vue'
-import App from './App.vue'
+import { createApp, h, provide } from "vue";
+import App from "./App.vue";
+import store from "./store";
 
 createApp({
-  render: () => h(App)
-}).mount('#app');
+  setup() {
+    provide("mainStore", store);
+  },
+  store,
+  render: () => h(App),
+}).mount("#app");

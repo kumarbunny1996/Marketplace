@@ -22,10 +22,6 @@ export default {
     name: {
       type: String,
     },
-    value: {
-      type: String,
-      default:""
-    },
     placeholder: {
       type: String,
     },
@@ -38,19 +34,15 @@ export default {
   setup(props) {
 
     let inputVal = ref('');
-    const setDef = ()=>{
-      let { value } = props;
-      inputVal = value;
-    }
-
+    
     watch(inputVal,(newVal) => {
       let {onInput}=props;
-      inputVal.value = newVal;
+      inputVal = newVal;
       onInput(inputVal);
     });
 
     return {
-      setDef
+      inputVal,
     };
   },
 };

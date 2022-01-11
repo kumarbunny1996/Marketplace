@@ -45,10 +45,10 @@ contract Marketplace {
   function purchaseProduct(uint _id) public payable {
     Product memory _product = products[_id];
     address payable _seller = _product.owner;// fetch the owner
-    require(_product.id > 0 && _product.id <= productCount);
-    require(msg.value >= _product.price);
-    require(!_product.purchased);
-    require(_seller != msg.sender);// checks buyer is not the seller
+     require(_product.id > 0 && _product.id <= productCount);
+      require(msg.value >= _product.price);
+     require(!_product.purchased);
+    // require(_seller == payable(msg.sender));// checks buyer is not the seller
     _product.owner = payable(msg.sender);
     _product.purchased = true;
     products[_id] = _product;
